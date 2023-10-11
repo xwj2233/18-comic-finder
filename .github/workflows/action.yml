@@ -36,7 +36,10 @@ jobs:
           name: finder-result
           # A file, directory or wildcard pattern that describes what to upload
           path: E:\
-        
+      - name: 输出工作目录路径
+        run: |
+          echo "工作目录路径是：${{GITHUB_WORKSPACE}}"
+
           # The desired behavior if no files are found using the provided path.
           if-no-files-found: warn
           # Duration after which artifact will expire in days. 0 means using default retention.Minimum 1 day. Maximum 90 days unless changed from the repository settings page.
